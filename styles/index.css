@@ -401,7 +401,7 @@ footer#mainfooter nav#footnav ul li a {
   color: var(--space-white);
   font-size: 2em;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   footer#mainfooter nav#footnav ul li a {
     font-size: 1.25em;
   }

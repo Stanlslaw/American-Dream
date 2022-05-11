@@ -270,12 +270,14 @@ section#about article {
   padding: 0 5%;
 }
 section#about article h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
 }
 section#about article p {
   text-indent: 1em;
-  font-size: 2em;
+  font-size: 1.75em;
+  word-spacing: 2px;
+  word-break: keep-all;
   text-align: justify;
 }
 @media screen and (max-width: 480px) {
@@ -403,7 +405,7 @@ footer#mainfooter address#socialmediarefs img {
   margin: auto 1em;
 }
 div.separator {
-  background-color: #000;
+  background-color: rgba(69, 69, 69, 0.3);
   width: 96%;
   margin: 1em auto;
   height: 3px;

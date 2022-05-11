@@ -395,7 +395,7 @@ footer#mainfooter address#socialmediarefs img {
   margin: auto 1em;
 }
 div.separator {
-  background-color: #000;
+  background-color: rgba(69, 69, 69, 0.3);
   width: 96%;
   margin: 1em auto;
   height: 3px;

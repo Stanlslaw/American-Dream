@@ -25,13 +25,12 @@ a {
 /*header*/
 header#mainheader {
   width: 100%;
-  height: 100%;
+  height: fit-content;
 }
 
 header#mainheader section#menu {
   display: flex;
   flex-direction: row;
-  position: fixed;
   z-index: 100;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -78,6 +77,82 @@ header#mainheader section ul li a {
   color: #fdfdfd;
 }
 
+/* order*/
+section#order {
+  width: 100%;
+  height: fit-content;
+}
+section#order .form {
+  width: 340px;
+  height: 470px;
+  background: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: 3em auto;
+  padding: 10px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+section#order .form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: black;
+  border-bottom: 3px solid black;
+}
+section#order .form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid black;
+}
+section#order .form input:focus {
+  border-bottom: 2px solid black;
+}
+
+section#order .form select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid black;
+}
+section#order .form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: black;
+}
+section#order .form button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid black;
+  background: 0;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+section#order .form button:hover {
+  background: black;
+  color: #fdfdfd;
+}
+
 /*  footer  */
 footer#mainfooter {
   width: 100%;
@@ -86,6 +161,7 @@ footer#mainfooter {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -101,6 +177,7 @@ footer#mainfooter address#socialmediarefs {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 16px;
 }
 footer#mainfooter address#socialmediarefs img {
   width: 7vh;

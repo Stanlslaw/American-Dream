@@ -30,12 +30,6 @@ header#mainheader {
   background-image: url(../pictures/181212_congress_2_4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  /* background-color: var(--space-white);
-  background-color: rgb(248, 248, 248);
-  display: flex;
-  flex-direction: column;
-  /* background-attachment: fixed; */
   background-position: center;
 }
 
@@ -127,7 +121,7 @@ label {
     display: block;
     width: 3em;
     height: 3em;
-    transition: transform 1s ease-in;
+    transition: transform 0.5s ease-in-out;
   }
   header#mainheader section :checked + label img:last-child:hover {
     transform: rotate(45deg);
@@ -214,7 +208,7 @@ main.card-zone article.card {
   margin: 20px;
   border-radius: 4px;
   border: 1px solid var(--space-grey);
-  box-shadow: 0 0 5px 0px var(--space-grey);
+  box-shadow: 2px 2px 5px 0px var(--space-grey);
   overflow: hidden;
 }
 
@@ -284,31 +278,14 @@ section#about article p {
   font-size: 2em;
   text-align: justify;
 }
-/**/
-section.backplace {
-  display: none;
-  background-image: url(../pictures/nyc-g9e8d67717_1920.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  width: 100%;
-  height: 20vh;
+@media screen and (max-width: 480px) {
+  section#about article p {
+    font-size: 1.25em;
+  }
+  section#about article h2 {
+    font-size: 2em;
+  }
 }
-section.backplace1 {
-  display: none;
-  background-color: black;
-  height: 3vh;
-  color: #fdfdfd;
-  overflow: hidden;
-  word-spacing: 20px;
-}
-/* Adress*/
-
-/* section#adress iframe {
-  width: 100%;
-  height: 40vh;
-} */
 
 section#contacts {
   width: 100%;
@@ -333,6 +310,11 @@ section#contacts article div h2 {
 
 section#contacts article div ul li {
   font-size: 2em;
+}
+
+section#contacts article div ul li a {
+  color: #000;
+  font-style: italic;
 }
 
 section#contacts article div ul li span {

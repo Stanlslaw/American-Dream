@@ -259,6 +259,8 @@ section#gallery {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  width: 100%;
+  height: fit-content;
 }
 
 article.slide {
@@ -268,6 +270,7 @@ article.slide {
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
+  align-items: center;
 }
 article.left {
   flex-direction: row-reverse;
@@ -326,8 +329,7 @@ div.separator {
 @media screen and (max-width: 425px) {
   article.slide div.contentbox {
     width: 300px;
-    height: 225px;
-    margin-bottom: 5em;
+    height: fit-content;
   }
 
   article.slide figure {

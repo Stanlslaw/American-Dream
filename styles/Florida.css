@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Monserat";
 }
 a {
   text-decoration: none;
@@ -26,7 +27,7 @@ a {
 header#mainheader {
   width: 100%;
   height: 100%;
-  background-image: url(../pictures/Florida.jpg);
+  background-image: url(../pictures/Florida/Florida.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(248, 248, 248);
@@ -93,7 +94,7 @@ label {
   cursor: pointer;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 870px) {
   header#mainheader section ul {
     display: none;
   }
@@ -189,74 +190,73 @@ header#mainheader section#startcont {
   height: 100%;
 }
 
+div.arrow {
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 16px);
+}
+div.arrow a img {
+  width: 32px;
+  height: 32px;
+}
+
+h2.title {
+  color: white;
+  font-size: 4em;
+  display: block;
+  position: absolute;
+  top: 14%;
+  right: 14%;
+}
+
 /* INFO */
 main.info {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-around;
+}
+section.short-info {
+  flex: 1 1 400px;
+  padding: 20px;
+  margin: auto;
+  justify-self: center;
+}
+section.short-info ul {
+  padding: 20px;
+}
+section.short-info ul li {
+  font-size: 1.5em;
+  margin-left: 20px;
+  word-break: keep-all;
+  text-align: justify;
+}
+section.short-info ul li > * {
+  font-style: italic;
+}
+section.short-info ul li a {
+  color: #000;
+}
+@media screen and (max-width: 480px) {
+  section.short-info ul li {
+    font-size: 1.5em;
+  }
 }
 
-/*  ORDER  */
-section#order {
-  width: 100%;
-  height: fit-content;
+section.long-info {
+  flex: 1 1 500px;
+  padding: 20px;
 }
-section#order .form {
-  width: 340px;
-  height: 400px;
-  background: #fdfdfd;
-  border-radius: 8px;
-  box-shadow: 0 0 40px -10px #000;
-  margin: 3em auto;
-  padding: 20px 30px;
-  max-width: calc(100vw - 40px);
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  position: relative;
+section.long-info h2 {
+  font-size: 2em;
+  text-align: center;
+  white-space: nowrap;
 }
-section#order .form h2 {
-  margin: 10px 0;
-  padding-bottom: 10px;
-  width: 180px;
-  color: black;
-  border-bottom: 3px solid black;
-}
-section#order .form input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  background: none;
-  outline: none;
-  resize: none;
-  border: 0;
-  font-family: "Montserrat", sans-serif;
-  transition: all 0.3s;
-  border-bottom: 2px solid black;
-}
-section#order .form input:focus {
-  border-bottom: 2px solid black;
-}
-section#order .form p:before {
-  content: attr(type);
-  display: block;
-  margin: 28px 0 0;
-  font-size: 14px;
-  color: black;
-}
-section#order .form button {
-  float: right;
-  padding: 8px 12px;
-  margin: 8px 0 0;
-  font-family: "Montserrat", sans-serif;
-  border: 2px solid black;
-  background: 0;
-  color: black;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-section#order .form button:hover {
-  background: black;
-  color: #fdfdfd;
+section.long-info p {
+  font-size: 1.25em;
+  word-spacing: 10px;
+  word-break: keep-all;
+  text-align: justify;
 }
 
 /* Gallery  */
@@ -275,7 +275,7 @@ article.slide {
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
 }
 article.left {
   flex-direction: row-reverse;
@@ -294,9 +294,11 @@ article.slide div.contentbox h2 {
 
 article.slide div.contentbox p {
   font-size: 1.5em;
+  text-align: justify;
 }
 
 article.slide figure {
+  all: unset;
   width: 600px;
   height: fit-content;
 }
@@ -304,6 +306,8 @@ article.slide figure {
 article.slide figure img {
   width: 600px;
   height: 450px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 div.separator {
@@ -316,13 +320,12 @@ div.separator {
 @media screen and (max-width: 1080px) {
   article.slide div.contentbox {
     width: 400px;
-    height: 300px;
+    height: fit-content;
   }
 
   article.slide figure {
     width: 400px;
     height: fit-content;
-    background-color: #000;
   }
 
   article.slide figure img {
@@ -340,7 +343,6 @@ div.separator {
   article.slide figure {
     width: 300px;
     height: fit-content;
-    background-color: #000;
   }
 
   article.slide figure img {
@@ -394,9 +396,19 @@ footer#mainfooter address#socialmediarefs img {
   height: 7vh;
   margin: auto 1em;
 }
+@media screen and (max-width: 600px) {
+  footer#mainfooter nav#footnav ul li a {
+    font-size: 1.25em;
+  }
+}
 div.separator {
   background-color: rgba(69, 69, 69, 0.3);
   width: 96%;
   margin: 1em auto;
   height: 3px;
+}
+
+@font-face {
+  font-family: "Monserat";
+  src: url("../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
 }

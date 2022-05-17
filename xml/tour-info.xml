@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<tourlist>
+    <tour>
+        <name>Флорида</name>
+        <duration>14 дней</duration>
+        <bonuses>Все включено</bonuses>
+        <hasexcursion>Экскурсии</hasexcursion>
+        <price>1700$</price>
+    </tour>
+    <tour>
+        <name>Техас</name>
+        <duration>14 дней</duration>
+        <bonuses>Все включено</bonuses>
+        <hasexcursion>Экскурсии</hasexcursion>
+        <price>1500$</price>
+    </tour>
+    <tour>
+        <name>Монтана</name>
+        <duration>14 дней</duration>
+        <bonuses>Все включено</bonuses>
+        <hasexcursion>Экскурсии</hasexcursion>
+        <price>1300$</price>
+    </tour>
+    <tour>
+        <name>Нью-Йорк</name>
+        <duration>14 дней</duration>
+        <bonuses>Все включено</bonuses>
+        <hasexcursion>Экскурсии</hasexcursion>
+        <price>1200$</price>
+    </tour>
+</tourlist>
